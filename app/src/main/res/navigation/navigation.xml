@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.percobaan.myapplication.ui.dashboard.DashboardFragment"
+        android:label="@string/menu_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_skills"
+        android:name="com.percobaan.myapplication.ui.skill.SkillsFragment"
+        android:label="@string/menu_skills"
+        tools:layout="@layout/fragment_skills" >
+        <action
+            android:id="@+id/action_nav_skills_to_skill_detail"
+            app:destination="@id/nav_skill_detail"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_skill_detail"
+        android:name="com.percobaan.myapplication.ui.detail.SkillDetailFragment"
+        android:label="@string/menu_skill_detail"
+        tools:layout="@layout/fragment_skill_detail" />
+
+</navigation>
